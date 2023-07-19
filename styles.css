@@ -1,0 +1,188 @@
+body {
+  text-align: center;
+  font-family: helvetica, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+:root {
+  --gradient: linear-gradient(
+    90deg,
+    rgba(4, 0, 4, 1) 2%,
+    rgba(255, 0, 241, 1) 10%,
+    rgba(136, 0, 254, 1) 50%,
+    rgba(42, 0, 255, 1) 90%,
+    rgba(4, 0, 24, 1) 98%
+  );
+  --pb: linear-gradient(45deg, #fff, #222);
+}
+
+h1 {
+  font-size: 42px;
+  margin-top: 200px;
+  background-image: var(--pb);
+  background-size: 400%;
+  animation: bg-animation 2.5s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+
+.h12 {
+  font-size: 42px;
+  margin-top: 20px;
+}
+
+/* Particles */
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+}
+
+/* Botões */
+
+#buttons-container button {
+  border: none;
+  padding: 10px 15px;
+  margin: 0 10px;
+  background-image: var(--gradient);
+  background-size: 400%;
+  animation: bg-animation 5s infinite;
+  font-weight: bold;
+}
+
+#buttons-container button:hover {
+  scale: 1.2;
+  box-shadow: #8800fe 2px 2px 8px;
+}
+
+/* jogo */
+#container {
+  display: flex;
+  width: 300px;
+  margin: 0;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.box {
+  height: 100px;
+  border: 5px solid #fff;
+  box-sizing: border-box;
+  flex: 1 1 33%;
+}
+
+#block-1,
+#block-2,
+#block-3 {
+  border-top: none;
+}
+#block-1,
+#block-4,
+#block-7 {
+  border-left: none;
+}
+#block-3,
+#block-6,
+#block-9 {
+  border-right: none;
+}
+#block-7,
+#block-8,
+#block-9 {
+  border-bottom: none;
+}
+
+.x {
+  font-size: 65px;
+  color: #2a00ff;
+  display: inline-block;
+  line-height: 100px;
+}
+
+.o {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #8800fe;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 17px;
+}
+
+/* Classe de esconder */
+
+.hide {
+  display: none !important;
+}
+
+/* placar */
+
+#scoreboard-container {
+  font-weight: bold;
+  margin-top: 30px;
+  font-size: 25px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.score-box {
+  margin: 0 20px;
+}
+
+.x-scoreboard {
+  color: #2a00ff;
+  margin-right: 3px;
+}
+
+#o-scoreboard {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #8800fe;
+  border-radius: 50%;
+  margin-right: 3px;
+}
+
+/* Mensagem de vitória */
+
+#message p {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 150px;
+  width: 500px;
+  font-size: 50px;
+  background: rgb(4, 0, 4);
+  background: linear-gradient(
+    90deg,
+    rgba(4, 0, 4, 1) 2%,
+    rgba(255, 0, 241, 1) 10%,
+    rgba(136, 0, 254, 1) 50%,
+    rgba(42, 0, 255, 1) 90%,
+    rgba(4, 0, 24, 1) 98%
+  );
+  color: #000;
+  padding: 20px;
+}
