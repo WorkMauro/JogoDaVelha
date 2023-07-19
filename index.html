@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jogo da Velha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="particles-js"></div>
+    <h1 id="h1">Jogo da Velha</h1>
+    <div id="buttons-container">
+      <button id="2-players">2 Jogadores</button>
+      <button id="ai-player">Contra IA</button>
+    </div>
+    <div id="container" class="hide">
+      <div class="box" id="block-1"></div>
+      <div class="box" id="block-2"></div>
+      <div class="box" id="block-3"></div>
+      <div class="box" id="block-4"></div>
+      <div class="box" id="block-5"></div>
+      <div class="box" id="block-6"></div>
+      <div class="box" id="block-7"></div>
+      <div class="box" id="block-8"></div>
+      <div class="box" id="block-9"></div>
+
+      <div id="scoreboard-container">
+        <h2>Placar:</h2>
+        <span class="score-box">
+          <span id="x-scoreboard">X</span>:
+          <span id="scoreboard-1">0</span>
+        </span>
+        <span class="score-box">
+          <span id="o-scoreboard"></span>:
+          <span id="scoreboard-2">0</span>
+        </span>
+      </div>
+      <div class="hide">
+        <div class="x">X</div>
+        <div class="o"></div>
+      </div>
+      <div id="message" class="hide">
+        <p>asd</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="particles.min.js"></script>
+    <script>
+      particlesJS({
+        particles: {
+          number: {
+            value: 156,
+            density: {
+              enable: true,
+              value_area: 946.9771699587272,
+            },
+          },
+          color: {
+            value: "#ffffff",
+          },
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#000000",
+            },
+            polygon: {
+              nb_sides: 4,
+            },
+            image: {
+              src: "img/github.svg",
+              width: 100,
+              height: 100,
+            },
+          },
+          opacity: {
+            value: 0.5,
+            random: false,
+            anim: {
+              enable: true,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false,
+            },
+          },
+          size: {
+            value: 2,
+            random: true,
+            anim: {
+              enable: false,
+              speed: 40,
+              size_min: 0.1,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 6,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
+            },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: true,
+              mode: "repulse",
+            },
+            onclick: {
+              enable: true,
+              mode: "push",
+            },
+            resize: true,
+          },
+          modes: {
+            grab: {
+              distance: 400,
+              line_linked: {
+                opacity: 1,
+              },
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 8,
+              speed: 3,
+            },
+            repulse: {
+              distance: 200,
+              duration: 0.4,
+            },
+            push: {
+              particles_nb: 4,
+            },
+            remove: {
+              particles_nb: 2,
+            },
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+  </body>
+</html>
